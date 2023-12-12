@@ -42,8 +42,6 @@ export default function Browse() {
       <MovieRow title={"Popular"} movies={popularMovie?.results} />
       <MovieRow title={"Top Rated"} movies={topRatedMovie?.results} />
       <MovieRow title={"Now Playing"} movies={nowPlayingMovie?.results} />
-
-      <MovieDetails />
     </>
   );
 }

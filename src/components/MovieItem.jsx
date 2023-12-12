@@ -1,21 +1,25 @@
+import { useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 
+import MovieDetails from "./MovieDetails";
 import { CREATE_IMG_URL } from "../utilities/movieServices";
 import { addFavorite, removeFavorite } from "../features/createHeartSlice";
 
 export default function MovieItem({ movie }) {
+  const [isDisplay, setIsDisplay] = useState(false);
+
   const dispatch = useDispatch();
   const { isActive } = useSelector((state) => state.heart);
 
-  const { title, backdrop_path, poster_path } = movie;
+  const { id, title, backdrop_path, poster_path } = movie || {};
 
   const handleChangeHeart = () => {
     dispatch(isActive ? removeFavorite() : addFavorite());
   };
 
   const handleDetails = () => {
-    console.log("hello");
+    setIsDisplay(!isDisplay);
   };
 
   return (
@@ -25,6 +29,7 @@ export default function MovieItem({ movie }) {
         src={CREATE_IMG_URL("w500", poster_path ?? backdrop_path)}
         alt={title}
       />
+
       <div className="absolute top-0 left-0 w-full h-44 bg-black/80 opacity-0 hover:opacity-100">
         <p className="whitespace-normal text-xs md:text-sm flex justify-center items-center h-full font-semibold">
           {title.length > 30 ? `${title.slice(0, 30)}...` : title}
@@ -36,6 +41,7 @@ export default function MovieItem({ movie }) {
         >
           details
         </button>
+        {isDisplay && <MovieDetails id={id} />}
         <div>
           {isActive ? (
             <FaHeart

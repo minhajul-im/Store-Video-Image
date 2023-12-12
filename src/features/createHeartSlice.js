@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isActive: false,
+  isDisplay: false,
 };
 const createHeartSlice = createSlice({
   name: "heart",
@@ -13,9 +14,13 @@ const createHeartSlice = createSlice({
     removeFavorite: (state) => {
       state.isActive = false;
     },
+    showDisplay: (state) => {
+      state.isDisplay = true;
+    },
   },
 });
 
-export const { addFavorite, removeFavorite } = createHeartSlice.actions;
+export const { addFavorite, removeFavorite, showDisplay } =
+  createHeartSlice.actions;
 
 export default createHeartSlice.reducer;
