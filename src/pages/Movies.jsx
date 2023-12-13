@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Hero, MovieRow } from "../components/index";
+import { Hero, MovieRow, MovieDetails } from "../components/index";
 
 import {
   fetchUpComing,

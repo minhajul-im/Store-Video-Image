@@ -4,6 +4,7 @@ import {
   createHeartSlice,
   createMovieTrailer,
   createPopularMovie,
+  createMovieDetails,
   createTopRatedMovie,
   createUpComingMovie,
   createNowPlayingMovie,
@@ -13,6 +14,7 @@ const store = configureStore({
   reducer: {
     heart: createHeartSlice,
     trailer: createMovieTrailer,
+    movieDetails: createMovieDetails,
     popularMovie: createPopularMovie,
     topRatedMovie: createTopRatedMovie,
     movieUpComing: createUpComingMovie,
