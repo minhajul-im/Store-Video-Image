@@ -1,6 +1,6 @@
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-import MovieItem from "./MovieItem";
+import { MovieItem } from "./index";
 
 export default function MovieRow({ title, movies }) {
   const handleSlider = (offset) => {

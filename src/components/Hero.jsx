@@ -22,13 +22,13 @@ export default function Hero({ hero }) {
   return (
     <div>
       <div className="w-full overflow-hidden -z-40">
-        <div className="absolute w-full h-[550px] lg:h-[750px] xl:h-[800px] bg-gradient-to-r from-black" />
+        <div className="absolute w-full bg-gradient-to-r from-black h-full lg:h-[1080px]" />
         <iframe
           className="w-screen aspect-video cursor-not-allowed"
           src={TRAILER_PLAY(key, "?rel=0&amp;autoplay=1&mute=1;controls=0")}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        ></iframe>
+        />
       </div>
       <div className="absolute w-full top-[25%] p-4">
         <h1 className="text-5xl pb-4 font-extrabold">{title}</h1>

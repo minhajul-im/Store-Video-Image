@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Hero from "../components/Hero";
-import MovieRow from "../components/MovieRow";
+import { Hero, MovieRow } from "../components/index";
 
 import {
   fetchUpComing,
@@ -37,7 +36,7 @@ export default function Browse() {
 
   return (
     <>
-      <Hero hero={upComingMovie?.results} />
+      <Hero hero={upComingMovie?.results || popularMovie?.results} />
 
       <MovieRow title={"Up Coming"} movies={upComingMovie?.results} />
       <MovieRow title={"Popular"} movies={popularMovie?.results} />
