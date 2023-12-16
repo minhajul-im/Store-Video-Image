@@ -6,6 +6,7 @@ import {
   createPopularMovie,
   createTopRatedMovie,
   createUpComingMovie,
+  createNowPlayingMovie,
 } from "../features/index";
 
 const store = configureStore({
@@ -13,8 +14,9 @@ const store = configureStore({
     heart: createHeartSlice,
     trailer: createMovieTrailer,
     popularMovie: createPopularMovie,
-    movieUpComing: createUpComingMovie,
     topRatedMovie: createTopRatedMovie,
+    movieUpComing: createUpComingMovie,
+    nowPlayingMovie: createNowPlayingMovie,
   },
 });
 
