@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import TMDB_API from "../utilities/constant/movieServices";
+import TMDB_API from "../utilities/movieServices";
 
 export const fetchMoviesApi = createAsyncThunk(
   "movies/fetchMoviesApi",
