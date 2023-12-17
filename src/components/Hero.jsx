@@ -22,6 +22,7 @@ export default function Hero({ hero }) {
   return (
     <div>
       <div className="w-full overflow-hidden -z-40">
+        <div className="absolute w-full h-[550px] lg:h-[750px] xl:h-[800px] bg-gradient-to-r from-black" />
         <iframe
           className="w-screen aspect-video cursor-not-allowed"
           src={TRAILER_PLAY(key, "?rel=0&amp;autoplay=1&mute=1;controls=0")}
