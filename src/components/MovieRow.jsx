@@ -4,13 +4,13 @@ import MovieItem from "./MovieItem";
 
 export default function MovieRow({ title, movies }) {
   const handleSlider = (offset) => {
-    const slider = document.getElementById("slider");
+    const slider = document.getElementById("slider" + title);
     slider.scrollLeft = slider.scrollLeft + offset;
   };
 
   return (
-    <div className="p-6 pt-0">
-      <h1 className="text-xl font-semibold ">{title}</h1>
+    <div className="px-6 pt-2">
+      <h1 className="text-xl font-semibold ms-2">{title}</h1>
       <div className=" relative flex items-center group">
         <MdChevronLeft
           onClick={() => handleSlider(-500)}
@@ -19,7 +19,7 @@ export default function MovieRow({ title, movies }) {
         />
 
         <div
-          id="slider"
+          id={`slider${title}`}
           className="no-scrollbar w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth"
         >
           {movies.map((movie) => (
