@@ -1,14 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import heartReducer from "../features/createHeartSlice";
-import moviesReducer from "../features/createMoviesSlice";
 import movieTrailer from "../features/createMovieTrailer";
+import popularMovieReducer from "../features/createPopularMovie";
+import upComingMovieReducer from "../features/createUpComingMovie";
 
 const store = configureStore({
   reducer: {
-    movie: moviesReducer,
-    trailer: movieTrailer,
     heart: heartReducer,
+    trailer: movieTrailer,
+    popularMovie: popularMovieReducer,
+    movieUpComing: upComingMovieReducer,
   },
 });
 

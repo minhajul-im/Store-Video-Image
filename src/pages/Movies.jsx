@@ -3,23 +3,31 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Hero from "../components/Hero";
 import MovieRow from "../components/MovieRow";
-import { fetchMoviesApi } from "../features/createMoviesSlice";
+
+import { fetchUpComing, fetchPopularMovie } from "../features/index";
 
 export default function Browse() {
   const dispatch = useDispatch();
-  const { movies } = useSelector((state) => state.movie);
+  const { popularMovie } = useSelector((state) => state.popularMovie);
+  const { upComingMovie } = useSelector((state) => state.movieUpComing);
 
   useEffect(() => {
-    dispatch(fetchMoviesApi());
+    dispatch(fetchUpComing());
+    dispatch(fetchPopularMovie());
   }, [dispatch]);
 
-  if (movies === null) return <h1>fetching........</h1>;
+  if (upComingMovie === null) return <h1>fetching........</h1>;
+  if (popularMovie === null) return <h1>fetching........</h1>;
+
+  console.log(popularMovie);
+  console.log(upComingMovie);
 
   return (
     <>
-      <Hero hero={movies?.results} />
+      <Hero hero={upComingMovie?.results} />
 
-      <MovieRow title={"Up Coming"} movies={movies?.results} />
+      <MovieRow title={"Up Coming"} movies={upComingMovie?.results} />
+      <MovieRow title={"Popular"} movies={popularMovie?.results} />
     </>
   );
 }
