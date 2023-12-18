@@ -1,4 +1,5 @@
 const key = import.meta.env.VITE_TM_DB_KEY;
+
 const base_url = "https://api.themoviedb.org/3/movie/";
 
 const TMDB_API = {

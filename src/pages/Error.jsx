@@ -6,7 +6,7 @@ export default function Error() {
   return (
     <section className=".screen flex flex-col items-center justify-center text-white h-screen">
       <h1 className="text-amber-800 text-8xl font-bold font-mono pb-10">
-        Oopss🙊🙊
+        Oopsss🙊🙊!
       </h1>
       <h4 className="text-2xl font-semibold text-gray-200 pb-8">
         Something is wrong!😅😅😅

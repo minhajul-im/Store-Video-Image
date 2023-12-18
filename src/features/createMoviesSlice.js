@@ -11,9 +11,9 @@ export const fetchMoviesApi = createAsyncThunk(
 );
 
 const initialState = {
+  isLoading: false,
   movies: null,
   isError: false,
-  isLoading: false,
 };
 
 const createMoviesSlice = createSlice({

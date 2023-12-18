@@ -10,9 +10,6 @@ const createHeartSlice = createSlice({
     addFavorite: (state, actions) => {
       state.isTrue = actions.payload;
     },
-    removeFavorite: (state, actions) => {
-      state.isTrue = actions.payload;
-    },
   },
 });
 

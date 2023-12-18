@@ -1,6 +1,6 @@
 import Home from "./Home";
-import Error from "./Error";
 import Login from "./Login";
+import Error from "./Error";
 import Movies from "./Movies";
 import Signup from "./SignUp";
 

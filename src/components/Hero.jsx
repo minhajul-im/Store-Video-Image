@@ -17,7 +17,11 @@ export default function Hero({ hero }) {
         <div className="absolute w-full top-[25%] p-4">
           <h1 className="text-5xl pb-4 font-extrabold">{title}</h1>
 
-          <p className="text-xs italic py-1">{release_date}</p>
+          <button className="text-xl font-semibold py-2 px-6 bg-slate-400 text-white rounded border border-slate-500 my-3">
+            play
+          </button>
+
+          <p className="text-xs italic py-1 mt-6">{release_date}</p>
           <p className="mt-4 w-[60%]">{overview}</p>
         </div>
       </div>

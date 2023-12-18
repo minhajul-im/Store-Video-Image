@@ -11,9 +11,9 @@ export const fetchTrailerApi = createAsyncThunk(
 );
 
 const initialState = {
+  isLoading: false,
   trailers: null,
   isError: false,
-  isLoading: false,
 };
 
 const createTrailerSlice = createSlice({

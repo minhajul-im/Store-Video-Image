@@ -1,4 +1,3 @@
-import React from "react";
 import MovieItem from "./MovieItem";
 
 export default function MovieRow({ title, movies }) {

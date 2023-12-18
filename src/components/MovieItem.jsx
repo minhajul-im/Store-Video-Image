@@ -1,8 +1,8 @@
-import React from "react";
-import { CREATE_IMG_URL } from "../utilities/movieServices";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+
 import { addFavorite } from "../features/createHeartSlice";
+import { CREATE_IMG_URL } from "../utilities/movieServices";
 
 export default function MovieItem({ movie }) {
   const { title, backdrop_path, poster_path } = movie;

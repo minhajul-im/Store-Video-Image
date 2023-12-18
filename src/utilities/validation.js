@@ -15,6 +15,7 @@ const isEmail = (email) => {
 const isPassword = (password) => {
   const checkPassword =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password);
+
   if (!checkPassword) return "Please should have number letter symbol!";
 
   return null;
