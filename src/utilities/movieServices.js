@@ -13,6 +13,8 @@ export const TRAILER = (id) => {
   return `${base_url}${id}/videos?api_key=${key}`;
 };
 
+export const TRAILER_PLAY = "https://www.youtube.com/embed/";
+
 export const CREATE_IMG_URL = (size, path) =>
   `https://image.tmdb.org/t/p/${size}${path}`;
 
