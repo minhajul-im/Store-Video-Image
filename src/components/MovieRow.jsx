@@ -9,7 +9,7 @@ export default function MovieRow({ title, movies }) {
   };
 
   return (
-    <div className="p-6 pt-0 top-[50%]">
+    <div className="p-6 pt-0">
       <h1 className="text-xl font-semibold ">{title}</h1>
       <div className=" relative flex items-center group">
         <MdChevronLeft

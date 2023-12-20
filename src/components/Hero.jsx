@@ -24,7 +24,7 @@ export default function Hero({ hero }) {
       <div className="w-full overflow-hidden -z-40">
         <iframe
           className="w-screen aspect-video cursor-not-allowed"
-          src={TRAILER_PLAY + key + "?rel=0&amp;autoplay=1&mute=1;controls=0"}
+          src={TRAILER_PLAY(key, "?rel=0&amp;autoplay=1&mute=1;controls=0")}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
