@@ -1,12 +1,15 @@
-import { Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
+import { Routes, Route } from "react-router-dom";
 
 import store from "./store";
+import Navbar from "../components/Navbar";
 import { Home, Movies, Error, Signup, Login } from "../pages/index";
 
 const App = () => {
   return (
     <Provider store={store}>
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
