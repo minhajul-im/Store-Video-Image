@@ -12,4 +12,7 @@ export const TRAILER = (id) => {
   return `${base_url}${id}/videos?api_key=${key}`;
 };
 
+export const CREATE_IMG_URL = (size, path) =>
+  `https://image.tmdb.org/t/p/${size}/${path}`;
+
 export default TMDB_API;
