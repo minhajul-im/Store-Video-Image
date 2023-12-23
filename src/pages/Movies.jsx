@@ -23,16 +23,3 @@ export default function Browse() {
     </>
   );
 }
-
-const Trailer = () => {
-  return (
-    <div className="w-screen">
-      <iframe
-        className="w-screen aspect-video"
-        src={"https://www.youtube.com/embed/e8rV-9zm1Kw"}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      ></iframe>
-    </div>
-  );
-};
