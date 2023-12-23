@@ -3,7 +3,7 @@ const base_url = "https://api.themoviedb.org/3/movie/";
 
 const TMDB_API = {
   popular: `${base_url}popular?api_key=${key}`,
-  topRelated: `${base_url}upcoming?api_key=${key}`,
+  upComing: `${base_url}upcoming?api_key=${key}`,
   topRelated: `${base_url}top_rated?api_key=${key}`,
   nowPlaying: `${base_url}now_playing?api_key=${key}`,
 };
@@ -13,6 +13,6 @@ export const TRAILER = (id) => {
 };
 
 export const CREATE_IMG_URL = (size, path) =>
-  `https://image.tmdb.org/t/p/${size}/${path}`;
+  `https://image.tmdb.org/t/p/${size}${path}`;
 
 export default TMDB_API;

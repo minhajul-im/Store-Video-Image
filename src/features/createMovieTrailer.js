@@ -11,7 +11,7 @@ export const fetchTrailerApi = createAsyncThunk(
 );
 
 const initialState = {
-  trailer: null,
+  trailers: null,
   isError: false,
   isLoading: false,
 };
@@ -27,7 +27,7 @@ const createTrailerSlice = createSlice({
       })
       .addCase(fetchTrailerApi.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.trailer = action.payload;
+        state.trailers = action.payload;
       })
       .addCase(fetchTrailerApi.rejected, (state) => {
         state.isLoading = false;
