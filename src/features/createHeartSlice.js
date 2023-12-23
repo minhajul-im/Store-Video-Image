@@ -1,18 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isTrue: false,
+  isActive: false,
 };
 const createHeartSlice = createSlice({
   name: "heart",
   initialState,
   reducers: {
-    addFavorite: (state, actions) => {
-      state.isTrue = actions.payload;
+    addFavorite: (state) => {
+      state.isActive = true;
+    },
+    removeFavorite: (state) => {
+      state.isActive = false;
     },
   },
 });
 
-export const { addFavorite } = createHeartSlice.actions;
+export const { addFavorite, removeFavorite } = createHeartSlice.actions;
 
 export default createHeartSlice.reducer;
