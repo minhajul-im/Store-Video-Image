@@ -1,16 +1,21 @@
-import { useSelector } from "react-redux";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
 
-import { addFavorite } from "../features/createHeartSlice";
 import { CREATE_IMG_URL } from "../utilities/movieServices";
+import { addFavorite, removeFavorite } from "../features/createHeartSlice";
 
 export default function MovieItem({ movie }) {
+  const dispatch = useDispatch();
+  const { isActive } = useSelector((state) => state.heart);
+
   const { title, backdrop_path, poster_path } = movie;
-  const { isTrue } = useSelector((state) => state.heart);
 
   const handleChangeHeart = () => {
-    console.log(isTrue);
-    addFavorite(true);
+    dispatch(isActive ? removeFavorite() : addFavorite());
+  };
+
+  const handleDetails = () => {
+    console.log("hello");
   };
 
   return (
@@ -22,10 +27,17 @@ export default function MovieItem({ movie }) {
       />
       <div className="absolute top-0 left-0 w-full h-44 bg-black/80 opacity-0 hover:opacity-100">
         <p className="whitespace-normal text-xs md:text-sm flex justify-center items-center h-full font-semibold">
-          {title}
+          {title.length > 30 ? `${title.slice(0, 30)}...` : title}
+          <br />
         </p>
-        <p>
-          {isTrue ? (
+        <button
+          onClick={handleDetails}
+          className="absolute text-xs right-3 top-3 border py-1 px-2 rounded bg-gray-600 hover:bg-gray-800"
+        >
+          details
+        </button>
+        <div>
+          {isActive ? (
             <FaHeart
               onClick={handleChangeHeart}
               className="absolute top-3 left-3 text-gray-200"
@@ -33,11 +45,12 @@ export default function MovieItem({ movie }) {
             />
           ) : (
             <FaRegHeart
+              onClick={handleChangeHeart}
               className="absolute top-3 left-3 text-gray-200"
               size={20}
             />
           )}
-        </p>
+        </div>
       </div>
     </div>
   );
