@@ -4,11 +4,5 @@
 
 body {
   color: #ffffff;
-  background-color: #0b051f;
-}
-
-.welCome {
-  color: #ffffff;
-  text-shadow: 2px 2px 2px #000, -2px -2px 2px #000, 2px -2px 2px #000,
-    -2px 2px 2px #000;
+  background-color: #110b24;
 }
