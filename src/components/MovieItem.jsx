@@ -19,7 +19,7 @@ export default function MovieItem({ movie }) {
   };
 
   return (
-    <div className="relative w-[160px] sm:w-[200px] lg:w-[300px] inline-block rounded-lg overflow-hidden cursor-pointer m-2">
+    <div className="relative w-[160px] sm:w-[200px] lg:w-[300px] inline-block rounded-lg overflow-hidden cursor-pointer m-2 select-none">
       <img
         className="w-full h-44 object-cover object-top"
         src={CREATE_IMG_URL("w500", poster_path ?? backdrop_path)}
