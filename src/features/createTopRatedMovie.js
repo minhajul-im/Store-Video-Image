@@ -16,7 +16,7 @@ const initialState = {
   isError: false,
 };
 
-const createPopularMovie = createSlice({
+const createTopRatedMovie = createSlice({
   name: "popular",
   initialState,
   extraReducers: (builder) =>
@@ -34,4 +34,4 @@ const createPopularMovie = createSlice({
       }),
 });
 
-export default createPopularMovie.reducer;
+export default createTopRatedMovie.reducer;
