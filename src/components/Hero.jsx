@@ -9,7 +9,7 @@ export default function Hero({ hero }) {
   const { trailers } = useSelector((state) => state.trailer);
 
   const randomHero = Math.floor(Math.random() * hero.length);
-  const { id, title, release_date, overview } = hero[randomHero];
+  const { id, title, release_date, overview } = hero[randomHero] || {};
 
   useEffect(() => {
     dispatch(fetchTrailerApi(id));
@@ -17,7 +17,7 @@ export default function Hero({ hero }) {
 
   if (trailers === null) return <h1>fetching trailer...</h1>;
 
-  const { key } = trailers?.results[0];
+  const { key } = trailers?.results[0] || {};
 
   return (
     <div>

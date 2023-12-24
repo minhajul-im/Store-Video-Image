@@ -9,6 +9,10 @@ const TMDB_API = {
   nowPlaying: `${base_url}now_playing?api_key=${key}&language=en-US&page=4`,
 };
 
+export const MOVIE_DETAILS = (id) => {
+  return `${base_url}${id}?api_key=${key}&language=en-US`;
+};
+
 export const TRAILER = (id) => {
   return `${base_url}${id}/videos?api_key=${key}`;
 };
