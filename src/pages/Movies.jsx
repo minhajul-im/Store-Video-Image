@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Hero, MovieRow, MovieDetails } from "../components/index";
+import Hero from "../components/movie/Hero";
+import MoviesRow from "../components/movie/MoviesRow";
 
 import {
   fetchUpComing,
   fetchPopularMovie,
   fetchTopRatedMovie,
   fetchNowPlayingMovie,
-} from "../features/index";
+} from "../features/movie/index";
 
 export default function Browse() {
   const dispatch = useDispatch();
@@ -38,10 +39,10 @@ export default function Browse() {
     <>
       <Hero hero={upComingMovie?.results || popularMovie?.results} />
 
-      <MovieRow title={"Up Coming"} movies={upComingMovie?.results} />
-      <MovieRow title={"Popular"} movies={popularMovie?.results} />
-      <MovieRow title={"Top Rated"} movies={topRatedMovie?.results} />
-      <MovieRow title={"Now Playing"} movies={nowPlayingMovie?.results} />
+      <MoviesRow title={"Up Coming"} movies={upComingMovie?.results} />
+      <MoviesRow title={"Popular"} movies={popularMovie?.results} />
+      <MoviesRow title={"Top Rated"} movies={topRatedMovie?.results} />
+      <MoviesRow title={"Now Playing"} movies={nowPlayingMovie?.results} />
     </>
   );
 }

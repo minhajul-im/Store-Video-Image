@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { TRAILER_PLAY } from "../utilities/movieServices";
-import { fetchTrailerApi } from "../features/createMovieTrailer";
+import { TRAILER_PLAY } from "../../utilities/movieServices";
+import { fetchTrailerApi } from "../../features/movie/createMovieTrailer";
 
 export default function Hero({ hero }) {
   const dispatch = useDispatch();
@@ -20,32 +20,32 @@ export default function Hero({ hero }) {
   const { key } = trailers?.results[0] || {};
 
   return (
-    <div>
-      <div className="w-full overflow-hidden -z-40">
-        <div className="absolute w-full bg-gradient-to-r from-black h-full lg:h-[1080px]" />
+    <>
+      <div className='w-full overflow-hidden -z-40'>
+        <div className='absolute w-full bg-gradient-to-r from-black h-full lg:h-[1080px]' />
         <iframe
-          className="w-screen aspect-video cursor-not-allowed"
+          className='w-screen aspect-video cursor-not-allowed'
           src={TRAILER_PLAY(key, "?rel=0&amp;autoplay=1&mute=1;controls=0")}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          title='YouTube video player'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
         />
       </div>
-      <div className="absolute w-full top-[25%] p-4">
-        <h1 className="text-5xl pb-4 font-extrabold">{title}</h1>
+      <div className='absolute w-full top-[25%] p-4'>
+        <h1 className='text-5xl pb-4 font-extrabold'>{title}</h1>
 
-        <div className="my-4 flex gap-4 items-center">
-          <button className="text-xl font-semibold py-2 px-6 bg-slate-400 text-white rounded border border-slate-500 my-3">
+        <div className='my-4 flex gap-4 items-center'>
+          <button className='text-xl font-semibold py-2 px-6 bg-slate-400 text-white rounded border border-slate-500 my-3'>
             play
           </button>
-          <button className="text-xl font-semibold py-2 px-6 bg-white text-gray-700 rounded border border-slate-500 my-3">
+          <button className='text-xl font-semibold py-2 px-6 bg-white text-gray-700 rounded border border-slate-500 my-3'>
             info
           </button>
         </div>
 
-        <p className="text-xs italic py-1 mt-6">{release_date}</p>
-        <p className="mt-4 w-[60%]">{overview}</p>
+        <p className='text-xs italic py-1 mt-6'>{release_date}</p>
+        <p className='mt-4 w-[60%]'>{overview}</p>
       </div>
-    </div>
+    </>
   );
 }
 

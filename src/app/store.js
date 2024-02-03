@@ -8,7 +8,7 @@ import {
   createTopRatedMovie,
   createUpComingMovie,
   createNowPlayingMovie,
-} from "../features/index";
+} from "../features/movie/index";
 
 const store = configureStore({
   reducer: {

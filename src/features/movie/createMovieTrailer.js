@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import { TRAILER } from "../utilities/movieServices";
+import { TRAILER } from "../../utilities/movieServices";
 
 export const fetchTrailerApi = createAsyncThunk(
   "trailer/fetchTrailerApi",
