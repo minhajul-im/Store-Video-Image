@@ -3,8 +3,8 @@ import { LuDot } from "react-icons/lu";
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchMovieDetails } from "../../features/movie/index";
 import { CREATE_IMG_URL } from "../../utilities/movieServices";
+import { fetchMovieDetails } from "../../features/movie/createMovieDetails";
 
 export default function MovieDetails({ id }) {
   const dispatch = useDispatch();

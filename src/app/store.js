@@ -1,23 +1,21 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import {
-  createHeartSlice,
-  createMovieTrailer,
-  createPopularMovie,
-  createMovieDetails,
-  createTopRatedMovie,
-  createUpComingMovie,
-  createNowPlayingMovie,
-} from "../features/movie/index";
+import createHeartSlice from "../features/movie/createHeartSlice";
+import createMovieDetails from "../features/movie/createMovieDetails";
+import createPopularMovie from "../features/movie/createPopularMovie";
+import createMovieTrailer from "../features/movie/createMovieTrailer";
+import createTopRatedMovie from "../features/movie/createTopRatedMovie";
+import createUpComingMovie from "../features/movie/createUpComingMovie";
+import createNowPlayingMovie from "../features/movie/createNowPlayingMovie";
 
 const store = configureStore({
   reducer: {
     heart: createHeartSlice,
     trailer: createMovieTrailer,
-    movieDetails: createMovieDetails,
     popularMovie: createPopularMovie,
-    topRatedMovie: createTopRatedMovie,
+    movieDetails: createMovieDetails,
     movieUpComing: createUpComingMovie,
+    topRatedMovie: createTopRatedMovie,
     nowPlayingMovie: createNowPlayingMovie,
   },
 });

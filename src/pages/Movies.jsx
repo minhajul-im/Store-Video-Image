@@ -4,12 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import Hero from "../components/movie/Hero";
 import MoviesRow from "../components/movie/MoviesRow";
 
-import {
-  fetchUpComing,
-  fetchPopularMovie,
-  fetchTopRatedMovie,
-  fetchNowPlayingMovie,
-} from "../features/movie/index";
+import { fetchUpComing } from "../features/movie/createUpComingMovie";
+import { fetchPopularMovie } from "../features/movie/createPopularMovie";
+import { fetchTopRatedMovie } from "../features/movie/createTopRatedMovie";
+import { fetchNowPlayingMovie } from "../features/movie/createNowPlayingMovie";
 
 export default function Browse() {
   const dispatch = useDispatch();

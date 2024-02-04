@@ -1,11 +1,11 @@
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 
-import { CREATE_IMG_URL } from "../../utilities/movieServices";
 import {
   addFavorite,
   removeFavorite,
 } from "../../features/movie/createHeartSlice";
+import { CREATE_IMG_URL } from "../../utilities/movieServices";
 
 export default function MovieItem({ movie, onShow }) {
   const dispatch = useDispatch();

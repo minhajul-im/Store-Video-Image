@@ -1,20 +1,20 @@
 const key = import.meta.env.VITE_TM_DB_KEY;
 
-const base_url = "https://api.themoviedb.org/3/movie/";
+const base_url = `https://api.themoviedb.org/3/`;
 
-const TMDB_API = {
-  popular: `${base_url}popular?api_key=${key}&language=en-US&page=1`,
-  upComing: `${base_url}upcoming?api_key=${key}&language=en-US&page=2`,
-  topRated: `${base_url}top_rated?api_key=${key}&language=en-US&page=3`,
-  nowPlaying: `${base_url}now_playing?api_key=${key}&language=en-US&page=4`,
+export const TMDB_API = {
+  popular: `${base_url}movie/popular?api_key=${key}&language=en-US&page=1`,
+  upComing: `${base_url}movie/upcoming?api_key=${key}&language=en-US&page=2`,
+  topRated: `${base_url}movie/top_rated?api_key=${key}&language=en-US&page=3`,
+  nowPlaying: `${base_url}movie/now_playing?api_key=${key}&language=en-US&page=4`,
 };
 
 export const MOVIE_DETAILS = (id) => {
-  return `${base_url}${id}?api_key=${key}&language=en-US`;
+  return `${base_url}movie/${id}?api_key=${key}&language=en-US`;
 };
 
 export const TRAILER = (id) => {
-  return `${base_url}${id}/videos?api_key=${key}`;
+  return `${base_url}movie/${id}/videos?api_key=${key}`;
 };
 
 export const TRAILER_PLAY = (key, controls) => {
@@ -24,4 +24,5 @@ export const TRAILER_PLAY = (key, controls) => {
 export const CREATE_IMG_URL = (size, path) =>
   `https://image.tmdb.org/t/p/${size}${path}`;
 
-export default TMDB_API;
+export const SEARCH_MOVIE = (query) =>
+  `search/movie?query=${query}&api_key=${key}`;
