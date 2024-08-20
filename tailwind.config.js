@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+
   theme: {
     extend: {
       fontFamily: {
@@ -11,14 +12,10 @@ export default {
       colors: {
         BG: {
           main: "var(--bg-main)",
-          soft: "var(--bg-soft)",
-          dark: "var(--bg-dark)",
         },
 
         TX: {
           main: "var(--text-main)",
-          soft: "var(--text-soft)",
-          dark: "var(--text-dark)",
         },
       },
       container: {
