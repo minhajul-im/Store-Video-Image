@@ -9,7 +9,7 @@ import WithOutDrag from "./WithOutDrag";
 import PreviewFiles from "./PreviewFiles";
 import Dragging from "./dragging/Dragging";
 import RejectedFiles from "./RejectedFiles";
-// import ClipboardCopy from "./ClipboardCopy";
+import ClipboardCopy from "./ClipboardCopy";
 import { CLOUD_NAME, BASE_URL } from "../constant";
 
 interface FileWithPreview extends File {
@@ -114,7 +114,7 @@ const Dropzone = () => {
             <RejectedFiles rejected={rejected} onRejected={handleRejected} />
           )}
 
-          {/* {urls?.length > 0 && <ClipboardCopy urls={urls} />} */}
+          {urls?.length > 0 && <ClipboardCopy urls={urls} />}
         </React.Fragment>
       )}
     </section>
