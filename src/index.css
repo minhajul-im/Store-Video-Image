@@ -5,23 +5,19 @@
 @layer base {
   :root {
     --bg-main: hsl(210, 11%, 15%);
-
     --text-main: hsl(0, 0%, 100%);
   }
-
   * {
     @apply transition-colors duration-200 ease-in-out;
   }
 }
 .theme-black {
   --bg-main: hsl(210, 11%, 15%);
-
   --text-main: hsl(0, 0%, 100%);
 }
 
 .theme-white {
   --bg-main: hsl(0, 0%, 100%);
-
   --text-main: hsl(210, 11%, 15%);
 }
 

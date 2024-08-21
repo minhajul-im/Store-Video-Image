@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  store-video-image:
+    build: .
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+      - VITE_CLOUD_NAME=${VITE_CLOUD_NAME}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: ["pnpm", "run", "dev"]
