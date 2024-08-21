@@ -4,12 +4,12 @@ import { useDropzone, FileRejection } from "react-dropzone";
 import Button from "./Button";
 import Heading from "./Heading";
 import Extension from "./Extension";
-import Loading from "./loading/Loading";
+// import Loading from "./loading/Loading";
 import WithOutDrag from "./WithOutDrag";
-import PreviewFiles from "./PreviewFiles";
+// import PreviewFiles from "./PreviewFiles";
 import Dragging from "./dragging/Dragging";
-import RejectedFiles from "./RejectedFiles";
-import ClipboardCopy from "./ClipboardCopy";
+// import RejectedFiles from "./RejectedFiles";
+// import ClipboardCopy from "./ClipboardCopy";
 import { CLOUD_NAME, BASE_URL } from "../constant";
 
 interface FileWithPreview extends File {
@@ -106,7 +106,7 @@ const Dropzone = () => {
             <Button count={files?.length} />
           </form>
 
-          {files?.length > 0 && (
+          {/* {files?.length > 0 && (
             <PreviewFiles onRemove={handleRemove} files={files} />
           )}
 
@@ -114,7 +114,7 @@ const Dropzone = () => {
             <RejectedFiles rejected={rejected} onRejected={handleRejected} />
           )}
 
-          {urls?.length > 0 && <ClipboardCopy urls={urls} />}
+          {urls?.length > 0 && <ClipboardCopy urls={urls} />} */}
         </React.Fragment>
       )}
     </section>
