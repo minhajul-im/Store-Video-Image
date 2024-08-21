@@ -4,7 +4,7 @@ import { useDropzone, FileRejection } from "react-dropzone";
 import Button from "./Button";
 import Heading from "./Heading";
 import Extension from "./Extension";
-// import Loading from "./loading/Loading";
+import Loading from "./loading/Loading";
 import WithOutDrag from "./WithOutDrag";
 // import PreviewFiles from "./PreviewFiles";
 import Dragging from "./dragging/Dragging";
