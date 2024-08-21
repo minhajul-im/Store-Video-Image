@@ -1,5 +1,5 @@
-import Moon from "../icons/Moon";
 import Sun from "../icons/Sun";
+import Moon from "../icons/Moon";
 
 type Theme = { theme: boolean; onToggle: () => void };
 
@@ -10,7 +10,7 @@ const Theme = ({ theme, onToggle }: Theme) => {
         theme ? "dark" : "light"
       }`}
       onClick={onToggle}>
-      {theme ? <Moon theme={theme} /> : <Sun theme={theme} />}
+      {theme ? <Sun theme={theme} /> : <Moon theme={theme} />}
     </button>
   );
 };
