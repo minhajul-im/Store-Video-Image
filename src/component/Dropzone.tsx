@@ -8,7 +8,7 @@ import Loading from "./loading/Loading";
 import WithOutDrag from "./WithOutDrag";
 import PreviewFiles from "./PreviewFiles";
 import Dragging from "./dragging/Dragging";
-// import RejectedFiles from "./RejectedFiles";
+import RejectedFiles from "./RejectedFiles";
 // import ClipboardCopy from "./ClipboardCopy";
 import { CLOUD_NAME, BASE_URL } from "../constant";
 
@@ -110,11 +110,11 @@ const Dropzone = () => {
             <PreviewFiles onRemove={handleRemove} files={files} />
           )}
 
-          {/* {rejected?.length > 0 && (
+          {rejected?.length > 0 && (
             <RejectedFiles rejected={rejected} onRejected={handleRejected} />
           )}
 
-          {urls?.length > 0 && <ClipboardCopy urls={urls} />} */}
+          {/* {urls?.length > 0 && <ClipboardCopy urls={urls} />} */}
         </React.Fragment>
       )}
     </section>
