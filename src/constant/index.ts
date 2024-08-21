@@ -1,11 +1,3 @@
-const firebaseAppId = import.meta.env.VITE_APP_ID;
-const firebaseApiKey = import.meta.env.VITE_API_KEY;
-const firebaseMeasurementId = import.meta.env.VITE_MEASUREMENT_ID;
-const firebaseMessagingSenderId = import.meta.env.VITE_MESSAGING_SEND_ID;
+export const CLOUD_NAME = import.meta.env.VITE_CLOUD_NAME;
 
-export {
-  firebaseApiKey,
-  firebaseAppId,
-  firebaseMeasurementId,
-  firebaseMessagingSenderId,
-};
+export const BASE_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
