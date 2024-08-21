@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 164px;
+  border: none;
 }
 
 .loader::before,
@@ -11,7 +13,7 @@
   content: "";
   height: 8em;
   width: 8em;
-  border: 1em solid #0060fa;
+  border: 1em solid #ac03d6;
   border-radius: 50%;
   animation: loader_79178 2s linear infinite;
 }
@@ -23,13 +25,13 @@
 
 @keyframes loader_79178 {
   0% {
-    border: 1em solid #0060fa;
+    border: 1em solid #ac03d6;
     transform: scale(0);
     opacity: 1;
   }
 
   100% {
-    border: 0 solid #0060fa;
+    border: 0 solid #ac03d6;
     transform: scale(1);
     opacity: 0;
   }
